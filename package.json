@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/Jorah-M/frontend-project-lvl2.git"
   },
+  "type": "module",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
