@@ -1,0 +1,26 @@
+{
+  "name": "gendiff",
+  "version": "1.0.0",
+  "description": "Compares two configuration files and shows a difference.",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorah-M/frontend-project-lvl2.git"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "author": "Manukyan Georgii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jorah-M/frontend-project-lvl2/issues"
+  },
+  "homepage": "https://github.com/Jorah-M/frontend-project-lvl2#readme"
+}
