@@ -2,7 +2,7 @@
   "name": "gendiff",
   "version": "1.0.1",
   "description": "Compares two configuration files and shows a difference.",
-  "main": "bin/gendiff.js",
+  "main": "src/index.js",
   "dependencies": {
     "commander": "^5.0.0",
     "fs": "0.0.1-security",
@@ -10,9 +10,9 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.5"
+    "@babel/preset-env": "^7.9.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,7 +27,7 @@
     "dist"
   ],
   "bin": {
-    "gendiff": "src/bin/gendiff.js"
+    "gendiff": "dist/bin/gendiff.js"
   },
   "author": "Manukyan Georgii",
   "license": "ISC",
