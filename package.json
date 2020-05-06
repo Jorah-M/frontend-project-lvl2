@@ -1,22 +1,33 @@
 {
   "name": "gendiff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compares two configuration files and shows a difference.",
-  "main": "index.js",
+  "main": "bin/gendiff.js",
   "dependencies": {
-    "commander": "^5.0.0"
+    "commander": "^5.0.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jorah-M/frontend-project-lvl2.git"
   },
-  "type": "module",
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "gendiff": "bin/gendiff.js"
+    "gendiff": "src/bin/gendiff.js"
   },
   "author": "Manukyan Georgii",
   "license": "ISC",
