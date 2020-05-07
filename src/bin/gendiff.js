@@ -2,10 +2,12 @@
 
 import program from 'commander';
 import diff from '../index.js';
+import { version } from '../../package.json';
 
 program
+.name('gendiff')
 .description('Compares two configuration files and shows a difference.')
-.version('1.0.0')
+.version(version)
 .option('-f, --format [type]', 'output format')
 .arguments('<first>, <second>')
 .action(diff);

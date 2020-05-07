@@ -1,0 +1,1 @@
+import diff from '../src/index.js'
