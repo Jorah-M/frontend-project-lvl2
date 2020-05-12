@@ -27,4 +27,5 @@ export default (first, second) => {
     }
     differencies += `}`;
     console.log(differencies);
+    return differencies;
 };

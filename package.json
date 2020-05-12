@@ -12,7 +12,7 @@
     "jest": "^26.0.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "npx -n --experimental-vm-modules jest"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,10 @@
     "dist"
   ],
   "type": "module",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
   "bin": {
     "gendiff": "src/bin/gendiff.js"
   },
