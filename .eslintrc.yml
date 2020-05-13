@@ -1,8 +1,13 @@
+plugins:
+  # https://github.com/jest-community/eslint-plugin-jest
+  - jest
 env:
   browser: true
   es6: true
   node: true
-extends: 'eslint:recommended'
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
