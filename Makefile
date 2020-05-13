@@ -6,5 +6,5 @@ lint:
 	npx eslint .
 test:
 	npm test
-test+coverage:
+test-coverage:
 	npm test -- --coverage
