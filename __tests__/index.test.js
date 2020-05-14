@@ -23,3 +23,12 @@ test('flat yaml files diff', () => {
     const expectedFlatOutput = fs.readFileSync('__tests__/fixtures/expectFlat.txt', 'utf-8').trim();
     expect (testDiff2).toBe(expectedFlatOutput);
 })
+
+test('flat ini files diff', () => {
+    const path5 = path.resolve(__dirname, 'fixtures/before.ini');
+    const path6 = path.resolve(__dirname, 'fixtures/after.ini');
+    const testDiff3 = diff(path5, path6);
+
+    const expectedFlatOutput = fs.readFileSync('__tests__/fixtures/expectFlat.txt', 'utf-8').trim();
+    expect (testDiff3).toBe(expectedFlatOutput);
+})
