@@ -1,11 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-
-const getFullPath = (filepath) => path.resolve(process.cwd(), filepath);
+import parser from './parser.js';
 
 export default (first, second) => {
-  const firstObject = JSON.parse(fs.readFileSync(getFullPath(first), 'utf-8'));
-  const secondObject = JSON.parse(fs.readFileSync(getFullPath(second), 'utf-8'));
+  const firstObject = parser(first);
+  const secondObject = parser(second);
 
   let differencies = '{\n';
   const keysOf2 = Object.keys(secondObject);
