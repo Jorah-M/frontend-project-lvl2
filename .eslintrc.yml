@@ -14,4 +14,4 @@ globals:
 parserOptions:
   ecmaVersion: 2018
   sourceType: module
-rules: {}
+rules: { 'import/extensions' : 'off' }
