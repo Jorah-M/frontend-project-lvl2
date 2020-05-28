@@ -1,31 +1,19 @@
-import parser from './parser.js';
+import fs from 'fs';
+import path from 'path';
+import parse from './parsers.js';
+import genDiff from './diff.js';
+import stylish from './formaters/stylish.js';
 
-export default (first, second) => {
-  const firstObject = parser(first);
-  const secondObject = parser(second);
-
-  let differencies = '{\n';
-  const keysOf2 = Object.keys(secondObject);
-
-  Object.entries(firstObject).forEach(([key, value]) => {
-    if (keysOf2.includes(key)) {
-      if (value === secondObject[key]) {
-        differencies += `    ${key} : ${value}\n`;
-      } else {
-        differencies += `  + ${key} : ${secondObject[key]}\n`;
-        differencies += `  - ${key} : ${value}\n`;
-      }
-    } else {
-      differencies += `  - ${key} : ${value}\n`;
-    }
-    delete secondObject[key];
-  });
-
-  Object.entries(secondObject).forEach(([key, value]) => {
-    differencies += `  + ${key} : ${value}\n`;
-  });
-
-  differencies += '}';
-  console.log(differencies);
-  return differencies;
+const parseFile = (filePath) => {
+  const fileExtName = path.extname(filePath).slice(1);
+  const fileData = fs.readFileSync(path.resolve(filePath), 'utf-8');
+  return parse(fileExtName, fileData);
 };
+
+const getDifference = (path1, path2) => {
+  const beforeData = parseFile(path1);
+  const afterData = parseFile(path2);
+  return stylish(genDiff(beforeData, afterData));
+};
+
+export default getDifference;
