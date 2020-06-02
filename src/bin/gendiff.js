@@ -12,7 +12,7 @@ program
   .arguments('<firstConfig>, <secondConfig>')
   .action(
     (firstConfig, secondConfig) => {
-      const result = getDifference(firstConfig, secondConfig);
+      const result = getDifference(firstConfig, secondConfig, program.format);
       // eslint-disable-next-line no-console
       console.log(result);
     },

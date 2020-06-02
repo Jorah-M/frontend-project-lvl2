@@ -1,27 +1,27 @@
 {
-    "common": {
-      "follow": false,
-      "setting1": "Value 1",
-      "setting3": {
-        "key": "value"
+    "survivers": {
+      "Johny": false,
+      "Lilly": "alive",
+      "Simpsons": {
+        "Bart": "injured"
       },
-      "setting4": "blah blah",
-      "setting5": {
-        "key5": "value5"
+      "The_Dog": "bark",
+      "Children": {
+        "Timmy": "was born"
       },
-      "setting6": {
-        "key": "value",
-        "ops": "vops"
+      "Justice_league": {
+        "Superman": "Invincible",
+        "Flash": "Fast_guy"
       }
     },
   
     "group1": {
       "foo": "bar",
       "baz": "bars",
-      "nest": "str"
+      "rts": "str"
     },
   
     "group3": {
-      "fee": 100500
+      "cash": 100
     }
   }

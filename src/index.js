@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parse from './parsers.js';
 import genDiff from './diff.js';
-import stylish from './formaters/stylish.js';
+import formatter from './formatters/index.js';
 
 const parseFile = (filePath) => {
   const fileExtName = path.extname(filePath).slice(1);
@@ -10,10 +10,10 @@ const parseFile = (filePath) => {
   return parse(fileExtName, fileData);
 };
 
-const getDifference = (path1, path2) => {
+const getDifference = (path1, path2, format) => {
   const beforeData = parseFile(path1);
   const afterData = parseFile(path2);
-  return stylish(genDiff(beforeData, afterData));
+  return formatter(genDiff(beforeData, afterData), format);
 };
 
 export default getDifference;
