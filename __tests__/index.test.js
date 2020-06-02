@@ -1,34 +1,34 @@
-import diff from '../src/index.js'
-import { fileURLToPath } from 'url';
+import getDifference from '../src/index.js'
 import path from 'path';
 import fs from 'fs';
 
-const __filename = fileURLToPath(import.meta.url); 
-const __dirname = path.dirname(__filename);
+const getPath = (filename) => path.resolve('__tests__', 'fixtures', filename);
+const plusExtension = (name, extension) => getPath(`${name}.${extension}`);
+const extensions = ['json', 'yaml', 'ini'];
 
-test('flat json files diff', () => {
-    const path1 = path.resolve(__dirname, 'fixtures/before.json');
-    const path2 = path.resolve(__dirname, 'fixtures/after.json');
-    const testDiff1 = diff(path1, path2);
+test ('stylish; all extensions', () => {
+  extensions.forEach((extension) => {
+    const realData = getDifference(plusExtension('before', extension), plusExtension('after', extension), 'stylish');
+    const expectedData = fs.readFileSync(getPath('expectedStylish'), 'utf-8');
 
-    const expectedFlatOutput = fs.readFileSync('__tests__/fixtures/expectFlat.txt', 'utf-8').trim();
-    expect (testDiff1).toBe(expectedFlatOutput);
-})
+    expect(realData).toBe(expectedData);
+  })
+});
 
-test('flat yaml files diff', () => {
-    const path3 = path.resolve(__dirname, 'fixtures/before.yml');
-    const path4 = path.resolve(__dirname, 'fixtures/after.yml');
-    const testDiff2 = diff(path3, path4);
+test ('plain; all extensions', () => {
+  extensions.forEach((extension) => {
+    const realData = getDifference(plusExtension('before', extension), plusExtension('after', extension), 'plain');
+    const expectedData = fs.readFileSync(getPath('expectedPlain'), 'utf-8');
 
-    const expectedFlatOutput = fs.readFileSync('__tests__/fixtures/expectFlat.txt', 'utf-8').trim();
-    expect (testDiff2).toBe(expectedFlatOutput);
-})
+    expect(realData).toBe(expectedData);
+  })
+});
 
-test('flat ini files diff', () => {
-    const path5 = path.resolve(__dirname, 'fixtures/before.ini');
-    const path6 = path.resolve(__dirname, 'fixtures/after.ini');
-    const testDiff3 = diff(path5, path6);
-
-    const expectedFlatOutput = fs.readFileSync('__tests__/fixtures/expectFlat.txt', 'utf-8').trim();
-    expect (testDiff3).toBe(expectedFlatOutput);
-})
+test ('json; all extensions', () => {
+  extensions.forEach((extension) => {
+    const realData = getDifference(plusExtension('before', extension), plusExtension('after', extension), 'json');
+    const expectedData = fs.readFileSync(getPath('expectedJson'), 'utf-8');
+  
+    expect(realData).toBe(expectedData);
+  })
+});

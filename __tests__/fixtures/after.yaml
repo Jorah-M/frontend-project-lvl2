@@ -1,0 +1,16 @@
+survivers:
+  Johny : false
+  Lilly : "alive"
+  Simpsons : true
+  The_Dog : "bark"
+  Children:
+    Timmy : "was born"
+  Justice_league:
+    Superman : "Invincible"
+    Flash : "Fast_guy"
+group1:
+  foo : "bar"
+  baz : "bars"
+  rts : "str"
+group3:
+  cash : "100"

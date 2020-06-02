@@ -1,0 +1,31 @@
+{
+    survivers: {
+        Lilly: alive
+      - Mick: OK
+        Simpsons: true
+        Justice_league: {
+            Superman: Invincible
+          + Flash: Fast_guy
+        }
+      + Johny: false
+      + The_Dog: bark
+      + Children: {
+            Timmy: was born
+        }
+    }
+    group1: {
+      + baz: bars
+      - baz: bas
+        foo: bar
+      + rts: str
+      - rts: {
+            key: value
+        }
+    }
+  - group2: {
+        complexity: high
+    }
+  + group3: {
+        cash: 100
+    }
+}

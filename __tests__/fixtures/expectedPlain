@@ -1,0 +1,9 @@
+Property 'survivers.Mick' was removed
+Property 'survivers.Justice_league.Flash' was added with value: 'Fast_guy'
+Property 'survivers.Johny' was added with value: false
+Property 'survivers.The_Dog' was added with value: 'bark'
+Property 'survivers.Children' was added with value: [complex value]
+Property 'group1.baz' was updated. From 'bas' to 'bars'
+Property 'group1.rts' was updated. From [complex value] to 'str'
+Property 'group2' was removed
+Property 'group3' was added with value: [complex value]

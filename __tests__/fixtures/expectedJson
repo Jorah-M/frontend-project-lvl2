@@ -1,0 +1,95 @@
+[
+  {
+    "state": "compare",
+    "name": "survivers",
+    "newValue": [
+      {
+        "state": "unmodified",
+        "name": "Lilly",
+        "oldValue": "alive"
+      },
+      {
+        "state": "removed",
+        "name": "Mick",
+        "oldValue": "OK"
+      },
+      {
+        "state": "unmodified",
+        "name": "Simpsons",
+        "oldValue": true
+      },
+      {
+        "state": "compare",
+        "name": "Justice_league",
+        "newValue": [
+          {
+            "state": "unmodified",
+            "name": "Superman",
+            "oldValue": "Invincible"
+          },
+          {
+            "state": "added",
+            "name": "Flash",
+            "newValue": "Fast_guy"
+          }
+        ]
+      },
+      {
+        "state": "added",
+        "name": "Johny",
+        "newValue": false
+      },
+      {
+        "state": "added",
+        "name": "The_Dog",
+        "newValue": "bark"
+      },
+      {
+        "state": "added",
+        "name": "Children",
+        "newValue": {
+          "Timmy": "was born"
+        }
+      }
+    ]
+  },
+  {
+    "state": "compare",
+    "name": "group1",
+    "newValue": [
+      {
+        "state": "modified",
+        "name": "baz",
+        "newValue": "bars",
+        "oldValue": "bas"
+      },
+      {
+        "state": "unmodified",
+        "name": "foo",
+        "oldValue": "bar"
+      },
+      {
+        "state": "modified",
+        "name": "rts",
+        "newValue": "str",
+        "oldValue": {
+          "key": "value"
+        }
+      }
+    ]
+  },
+  {
+    "state": "removed",
+    "name": "group2",
+    "oldValue": {
+      "complexity": "high"
+    }
+  },
+  {
+    "state": "added",
+    "name": "group3",
+    "newValue": {
+      "cash": "100"
+    }
+  }
+]
