@@ -2,7 +2,7 @@
 ![NodeProject CI](https://github.com/Jorah-M/frontend-project-lvl2/workflows/NodeProject%20CI/badge.svg)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b2c278eac2d81d66aeb1/test_coverage)](https://codeclimate.com/github/Jorah-M/frontend-project-lvl2/test_coverage)
 
-<b>Второй проект Hexlet - вычислитель отличий.</b>
+<h1>Второй проект Hexlet - вычислитель отличий.</h1>
 
 Его задача - провести сравнение двух файлов определенного формата и вывести их различия в удобной форме.
 
@@ -36,3 +36,11 @@ $ gendiff [options] filepath1 filepath2
 Пример работы вычислителя по default (без указания формата):
 <a href="https://asciinema.org/a/336526" target="_blank"><img src="https://asciinema.org/a/336526.svg" /></a>
 
+Пример работы вычислителя с выводом в формате json:
+<a href="https://asciinema.org/a/336527" target="_blank"><img src="https://asciinema.org/a/336527.svg" /></a>
+
+Пример работы вычислителя с выводом в формате plain:
+<a href="https://asciinema.org/a/336529" target="_blank"><img src="https://asciinema.org/a/336529.svg" /></a>
+
+Пример работы вычислителя с выводом в формате stylish:
+<a href="https://asciinema.org/a/336531" target="_blank"><img src="https://asciinema.org/a/336531.svg" /></a>
