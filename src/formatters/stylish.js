@@ -12,7 +12,7 @@ const stylish = (items) => {
   const buildsString = (data, indentCounter) => {
     const indent = tab.repeat(indentCounter);
     return data.map(({
-      state, name, newValue, oldValue,
+      state, name, newValue, oldValue, children,
     }) => {
       switch (state) {
         case 'removed':
@@ -22,7 +22,7 @@ const stylish = (items) => {
         case 'unmodified':
           return `${indent}  ${name}: ${convert(oldValue, indent)}`;
         case 'compare':
-          return `${indent}  ${name}: {\n${buildsString(newValue, indentCounter + tabsCount)}\n${indent}  }`;
+          return `${indent}  ${name}: {\n${buildsString(children, indentCounter + tabsCount)}\n${indent}  }`;
         case 'modified':
           return `${indent}+ ${name}: ${convert(newValue, indent)}\n${indent}- ${name}: ${convert(oldValue, indent)}`;
         default:

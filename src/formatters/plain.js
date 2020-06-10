@@ -12,7 +12,7 @@ const makePath = (acc, name) => (acc.length !== 0 ? `${acc}.${name}` : name);
 
 const plain = (items) => {
   const buildString = (data, path = '') => data.map(({
-    state, name, newValue, oldValue,
+    state, name, newValue, oldValue, children,
   }) => {
     const key = makePath(path, name);
     switch (state) {
@@ -21,9 +21,9 @@ const plain = (items) => {
       case 'added':
         return `Property '${key}' was added with value: ${convert(newValue)}`;
       case 'unmodified':
-        return false;
+        return null;
       case 'compare':
-        return buildString(newValue, key);
+        return buildString(children, key);
       case 'modified':
         return `Property '${key}' was updated. From ${convert(oldValue)} to ${convert(newValue)}`;
       default:

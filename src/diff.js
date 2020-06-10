@@ -22,7 +22,7 @@ const genDiff = (beforeDat, afterDat) => _.union(_.keys(beforeDat), _.keys(after
 
   if ((typeof beforeDat[key] === 'object') && (typeof afterDat[key] === 'object')) {
     return {
-      state: 'compare', name: key, newValue: genDiff(beforeDat[key], afterDat[key]),
+      state: 'compare', name: key, children: genDiff(beforeDat[key], afterDat[key]),
     };
   }
 
@@ -30,6 +30,5 @@ const genDiff = (beforeDat, afterDat) => _.union(_.keys(beforeDat), _.keys(after
     state: 'modified', name: key, newValue: afterDat[key], oldValue: beforeDat[key],
   };
 });
-
 
 export default genDiff;

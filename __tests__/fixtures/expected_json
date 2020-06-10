@@ -2,7 +2,7 @@
   {
     "state": "compare",
     "name": "survivers",
-    "newValue": [
+    "children": [
       {
         "state": "unmodified",
         "name": "Lilly",
@@ -21,7 +21,7 @@
       {
         "state": "compare",
         "name": "Justice_league",
-        "newValue": [
+        "children": [
           {
             "state": "unmodified",
             "name": "Superman",
@@ -56,7 +56,7 @@
   {
     "state": "compare",
     "name": "group1",
-    "newValue": [
+    "children": [
       {
         "state": "modified",
         "name": "baz",
