@@ -1,8 +1,8 @@
-const convert = (data) => {
-  if ((typeof data === 'string')) {
+const stringify = (data) => {
+  if (typeof data === 'string') {
     return `'${data}'`;
   }
-  if ((typeof data === 'object')) {
+  if (typeof data === 'object') {
     return '[complex value]';
   }
   return data;
@@ -19,13 +19,13 @@ const plain = (items) => {
       case 'removed':
         return `Property '${key}' was removed`;
       case 'added':
-        return `Property '${key}' was added with value: ${convert(newValue)}`;
+        return `Property '${key}' was added with value: ${stringify(newValue)}`;
       case 'unmodified':
         return null;
       case 'compare':
         return buildString(children, key);
       case 'modified':
-        return `Property '${key}' was updated. From ${convert(oldValue)} to ${convert(newValue)}`;
+        return `Property '${key}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}`;
       default:
         throw new Error(`State ${state} is unknown!`);
     }

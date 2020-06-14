@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import getDifference from '../src/index.js';
 
-const getFullPath = (filename, extension) => `${path.resolve('__tests__', 'fixtures', filename)}.${extension}`;
+const getFullPath = (filename, extension) => path.resolve('__tests__', 'fixtures', `${filename}.${extension}`);
 const extensions = ['json', 'yaml', 'ini'];
 const formats = ['json', 'plain', 'stylish'];
 
